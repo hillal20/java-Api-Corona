@@ -6,14 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.util.concurrent.CompletableFuture;
 
 @SpringBootApplication
-public class JavaapiApplication {
+public class JavaApiApplication {
 
 
 
@@ -23,7 +18,7 @@ public class JavaapiApplication {
         System.out.println("==== api corona app is running ===== ");
 
 
-        ConfigurableApplicationContext context = SpringApplication.run(JavaapiApplication.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(JavaApiApplication.class, args);
         CoronaService coronaService = context.getBean(CoronaService.class);
         coronaService.fetchCoronaData();
 
