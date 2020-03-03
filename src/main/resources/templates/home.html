@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Corona App </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
+</head>
+
+<body>
+
+
+<table>
+    <tr>
+        <th>Province </th>
+        <th>Country </th>
+        <th># People</th>
+    </tr>
+    <tr th:each="stat : ${coronaStats}">
+        <td th:text="${stat.country}"></td>
+        <td th:text="${stat.province}"></td>
+        <td th:text="${stat.latestStats}"></td>
+    </tr>
+</table>
+
+
+
+
+</body>
+
+</html>
